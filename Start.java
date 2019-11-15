@@ -4,16 +4,17 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.Toolkit;
-import java.awt.Component;
+
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class Start {
+	static int gameState = 0; // keep track of the screen user is on
+	static int playerMoney = 10;
+	static GardenScreen garden;
 
-	public static void main(String[] args) {
-		int gameState = 0; // keep track of the screen user is on
-		
+	public static void main(String[] args) {		
 //		Setting up graphics window.
 		JFrame window = new JFrame("Garden Simulator");
 		window.setLocationByPlatform(true);
@@ -29,19 +30,27 @@ public class Start {
 				g.setBackground(Color.WHITE);
 				g.setColor(Color.BLACK);
 
-// 		Draw call goes here after draw method has been made
+				draw(g, width, height);
 			}
 		};
 		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
 		int wWidth = (int) (d.width * 0.8);
 		int wHeight = (int) (d.height * 0.8);
 		window.setSize(wWidth, wHeight);
+		garden = new GardenScreen(wWidth, wHeight);
 		window.setBackground(Color.WHITE);
 		panel.setBackground(Color.WHITE);
 		window.setContentPane(panel);
 		window.setVisible(true);
 		window.setResizable(false);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	public static void draw(Graphics g, int width, int height) {
+		g.drawString("$" + playerMoney, width / 2, 10);
+//		TO DO: write code to determine when to draw garden screen vs other screens
+		garden.draw(g, width, height);
+		
 	}
 
 }
