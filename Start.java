@@ -1,5 +1,6 @@
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -29,10 +30,13 @@ public class Start {
 				g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 				g.setBackground(Color.WHITE);
 				g.setColor(Color.BLACK);
+				g.setFont(new Font("Comic Sans MS", Font.PLAIN, 20));
 
 				draw(g, width, height);
 			}
 		};
+
+		
 		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
 		int wWidth = (int) (d.width * 0.8);
 		int wHeight = (int) (d.height * 0.8);
@@ -43,11 +47,15 @@ public class Start {
 		window.setContentPane(panel);
 		window.setVisible(true);
 		window.setResizable(false);
+		
+//		placeholder line to test plant object
+		garden.plotColumnOne[0].plantPlant(0);
+		
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
 	public static void draw(Graphics g, int width, int height) {
-		g.drawString("$" + playerMoney, width / 2, 10);
+		g.drawString("$" + playerMoney, width / 2, 20);
 //		TO DO: write code to determine when to draw garden screen vs other screens
 		garden.draw(g, width, height);
 		
