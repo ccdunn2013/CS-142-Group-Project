@@ -2,7 +2,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
-public class GardenScreen {
+public class GardenScreen extends Screen{
 	Plot[] plotColumnOne = new Plot[32];
 	Plot[] plotColumnTwo = new Plot[32];
 	Plot[] plotColumnThree = new Plot[32];
@@ -10,6 +10,8 @@ public class GardenScreen {
 	static int rowsInColumn = 8;
 	static int plotSize = 0;
 	Color brown = new Color(0.55f, 0.30f, 0.0f);
+	Rectangle water;
+	
 	
 	public GardenScreen(int width, int height) {
 		int thirdOfWidth = (int) (width * 0.9) / 3;
@@ -51,6 +53,8 @@ public class GardenScreen {
 		for (int i = 0; i < 4; i++) {
 			plotColumnOne[i].isUnlocked = true;
 		}
+		
+		water = new Rectangle((int) (width * 0.89), (int) (height * 0.77), (int) (width * 0.1), (int) (width * 0.1));
 		
 	}
 	
@@ -108,7 +112,13 @@ public class GardenScreen {
 			}
 		}
 		g.setColor(Color.BLUE);
-//		TO DO: Create a rectangle that holds the bounds for the water pool and use it for the fillOval call.
-		g.fillOval((int) (width * 0.89), (int) (height * 0.8), (int) (width * 0.1), (int) (width * 0.1));
+		g.fillOval(water.x, water.y, water.width, water.height);
 	}
+
+	@Override
+	public void update() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
