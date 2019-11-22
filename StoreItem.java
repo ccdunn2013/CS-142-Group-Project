@@ -10,15 +10,15 @@ public class StoreItem extends Button {
 	public StoreItem (int x, int y, int width, int height, int itemType, int plantType) {
 		this.rect = new Rectangle(x, y, width, height);
 		this.itemType = itemType;
-		if (itemType == -1) {
+		if (itemType == -1) { // if the item slot in the store is not empty set it to be clickable
 			this.name = "";
 			this.isClickable = false;
 			}else {
 				this.isClickable = true;
 			}
-		if (itemType == 0) {
+		if (itemType == 0) { // check what type of item it is
 			this.plantType = plantType;
-			if (plantType == 0) {
+			if (plantType == 0) { // if the item is a seed packet check what type of plant it is
 				this.name = "Rose Seed";
 				this.cost = 1;
 			}//else if () {} TO DO: add more else if statements for other plant types

@@ -4,20 +4,20 @@ import java.util.Random;
 
 public class Plant {
 	Random r = new Random();
-	String name = null;
-	static int type = -1;
-	int turnsToGrow = -1;
-	int sucessfulTurns = 0;
-	int waterPerTurn = -1;
-	int value = -1;
+	String name = null; //name of the plant
+	static int type = -1; // int used to identify the plant type
+	int turnsToGrow = -1; // the number of successful turns a plant takes to become harvestable
+	int sucessfulTurns = 0; // the number of successful turns the plant has had so far
+	int waterPerTurn = -1; // the number of times a plant must be watered each turn for the turn to be successful
+	int value = -1; // how much money the player gets when they harvest the plant
 	
 	public Plant(int t) {
 		type = t;
 		if (t == 0) {
-			name = "Rose";
-			turnsToGrow = r.nextInt(2) + 3;
+			name = "Rose"; //setting name of type of plant
+			turnsToGrow = r.nextInt(2) + 3; // creates a random number of turns needed before harvest this particular range is 3-5
 			waterPerTurn = 1;
-			value = r.nextInt(5) + 7;
+			value = r.nextInt(5) + 7; // setting random sell value for the plant this particular range is $7-$12
 			
 		}//else if () {}
 //		TO DO: write else if statements to create other types of plants
