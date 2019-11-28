@@ -47,10 +47,12 @@ public class Start {
 		window.setContentPane(panel);
 		window.setVisible(true);
 		window.setResizable(false);
-		
+
+
 //		placeholder line to test plant object
 		garden.plotColumnOne[0].plantPlant(0);
-		
+		screenSelect Travel = new screenSelect();
+		Travel.setVisible(true);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
@@ -58,7 +60,8 @@ public class Start {
 		g.drawString("$" + playerMoney, width / 2, 20);
 //		TO DO: write code to determine when to draw garden screen vs other screens
 		garden.draw(g, width, height);
-		
+
+
 	}
 
 }
