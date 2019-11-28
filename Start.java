@@ -51,6 +51,7 @@ public class Start {
 
 //		placeholder line to test plant object
 		garden.plotColumnOne[0].plantPlant(0);
+//		build new screen with JComboFrame
 		screenSelect Travel = new screenSelect();
 		Travel.setVisible(true);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
