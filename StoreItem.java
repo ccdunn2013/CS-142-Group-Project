@@ -21,6 +21,18 @@ public class StoreItem extends Button {
 			if (plantType == 0) { // if the item is a seed packet check what type of plant it is
 				this.name = "Rose Seed";
 				this.cost = 1;
+			}
+			else if(plantType == 1) {
+				this.name = "Lavender Seed";
+				this.cost = 3;
+			}
+			else if(plantType == 2) {
+				this.name = "Cactus Seed";
+				this.cost = 5;
+			}
+			else if(plantType == 1) {
+				this.name = "Kitten Seed";
+				this.cost = 10;
 			}//else if () {} TO DO: add more else if statements for other plant types
 		}//else if () {} TO DO: add more else if statements for other item types
 	}
