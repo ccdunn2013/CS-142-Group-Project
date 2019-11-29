@@ -19,7 +19,26 @@ public class Plant {
 			waterPerTurn = 1;
 			value = r.nextInt(5) + 7; // setting random sell value for the plant this particular range is $7-$12
 			
-		}//else if () {}
+		}
+		else if(t == 1) {
+			name = "Lavender";
+			turnsToGrow = r.nextInt(3) + 5;
+			waterPerTurn = 2;
+			value = r.nextInt(8) + 6;
+		}
+		else if( t == 2) {
+			name = "Cactus";
+			turnsToGrow = r.nextInt(5) + 9;
+			waterPerTurn = 1;
+			value = r.nextInt(10) + 10;
+		}
+		else if(t == 3) {
+			name = "Meow-er";
+			turnsToGrow = r.nextInt(10) + 8;
+			waterPerTurn = 3;
+			value = r.nextInt(15) + 12;
+		}
+		//else if () {}
 //		TO DO: write else if statements to create other types of plants
 		
 	}
