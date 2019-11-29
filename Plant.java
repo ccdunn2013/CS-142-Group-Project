@@ -49,7 +49,67 @@ public class Plant {
 			g.drawLine((int ) (plotX + (plotSize / 2)), plotY + plotSize, (int ) (plotX + (plotSize / 2)), (int) (plotY + (plotSize * 0.15)));
 			g.setColor(Color.RED);
 			g.fillOval((int)((plotSize * 0.7) / 2) + plotX, plotY, (int) (plotSize * 0.3), (int) (plotSize * 0.35));
-		}//else if () {}
+		}
+		else if(type == 1) {
+			g.setColor(Color.GREEN);
+			g.drawLine(plotX + 18, plotY + 10, plotX + 18, plotY + 38); // center
+			g.drawLine(plotX + 30, plotY + 12, plotX + 18, plotY + 38); //right			
+			g.drawLine(plotX + 6, plotY + 12, plotX + 18, plotY + 38); //left
+			
+			g.setColor(Color.MAGENTA);
+			g.fillOval(plotX + 17, plotY + 2, 4, 4); // center
+			g.fillOval(plotX + 16, plotY + 6, 6, 6);
+			g.fillOval(plotX + 15, plotY + 12, 8, 8);
+			
+			g.fillOval(plotX + 2, plotY + 4, 4, 4); //left
+			g.fillOval(plotX + 3, plotY + 7, 6, 6);
+			g.fillOval(plotX + 4, plotY + 12, 8, 8);
+			
+			g.fillOval(plotX + 32, plotY + 4, 4, 4); //right
+			g.fillOval(plotX + 29, plotY + 7, 6, 6);
+			g.fillOval(plotX + 26, plotY + 12, 8, 8);
+		}
+		else if(type == 2) {
+			g.setColor(Color.GREEN);
+			g.fillOval(plotX + 8, plotY + 13, 6, 6); // left
+			g.fillRect(plotX + 8, plotY + 15, 6, 6);
+			g.fillOval(plotX + 8, plotY + 19, 6, 6);
+			
+			g.fillOval(plotX + 18, plotY + 4, 7, 7); //center
+			g.fillRect(plotX + 18, plotY + 6, 7, 33);
+			g.fillRect(plotX + 10, plotY + 19, 23, 6);
+			
+			g.fillOval(plotX + 29, plotY + 10, 6, 6); //right			
+			g.fillRect(plotX + 29, plotY + 12, 6, 9);			
+			g.fillOval(plotX + 29, plotY + 19, 6, 6);
+			
+		}
+		else if (type == 3) {
+			g.setColor(Color.GREEN);
+			g.drawLine((int ) (plotX + (plotSize / 2)), plotY + plotSize, (int ) (plotX + (plotSize / 2)), (int) (plotY + (plotSize * 0.15)));
+			g.fillOval(plotX + 20, plotY + 23, 8, 8);
+			g.drawLine(plotX + 29, plotY + 20, plotX + 23, plotY + 23);
+			g.drawLine(plotX + 29, plotY + 20, plotX + 27, plotY + 28);
+			
+			g.setColor(Color.ORANGE);
+			g.fillOval((int)((plotSize * 0.7) / 2) + plotX, plotY + 5, (int) (plotSize * 0.3), (int) ((plotSize) * 0.35));
+			g.drawLine(plotX + 13, plotY, plotX + 13, plotY + 10);	
+			g.drawLine(plotX  + 13, plotY, plotX + 18, plotY + 10);
+			g.drawLine(plotX + 23, plotY, plotX + 23, plotY + 10);
+			g.drawLine(plotX + 23, plotY, plotX + 18, plotY + 10);
+			
+			g.setColor(Color.CYAN);
+			g.fillOval(plotX + 14, plotY + 8, 2, 2);
+			g.fillOval(plotX + 19, plotY + 8, 2, 2);
+			
+			g.setColor(Color.BLACK);
+			g.fillOval(plotX + 16, plotY + 12, (int) (plotSize * 0.1), (int)(plotSize * 0.06));
+			g.drawLine(plotX + 17, plotY + 13, plotX + 17, plotY + 14);
+			g.drawOval(plotX + 14, plotY + 8, 2, 2);
+			g.drawOval(plotX + 19, plotY + 8, 2, 2);
+			g.drawLine(plotX + 27, plotY + 22, plotX + 23, plotY + 27);
+		}
+		//else if () {}
 //		TO DO: write corresponding else if draw calls for other types of plants
 	}
 
