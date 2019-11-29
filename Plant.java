@@ -38,6 +38,33 @@ public class Plant {
 			waterPerTurn = 3;
 			value = r.nextInt(15) + 12;
 		}
+		else if (t == 4) {
+			name = "Strawberry"; //setting name of type of plant
+			turnsToGrow = r.nextInt(2) + 1; // creates a random number of turns needed before harvest this particular range is 1-3
+			waterPerTurn = 1;
+			value = r.nextInt(5) + 5; // setting random sell value for the plant this particular range is $5-$10
+		}
+		
+		else if (t == 5) {
+			name = "Eggplant"; //setting name of type of plant
+			turnsToGrow = r.nextInt(2) + 2; // creates a random number of turns needed before harvest this particular range is 2-4
+			waterPerTurn = 1;
+			value = r.nextInt(5) + 6; // setting random sell value for the plant this particular range is $6-$11
+	}
+		
+		else if (t == 6) {
+			name = "Cabbage"; //setting name of type of plant
+			turnsToGrow = r.nextInt(2) + 3; // creates a random number of turns needed before harvest this particular range is 3-5
+			waterPerTurn = 1;
+			value = r.nextInt(5) + 8; // setting random sell value for the plant this particular range is $8- $13
+	}
+		
+		else if (t == 7) {
+			name = "Pumpkin"; //setting name of type of plant
+			turnsToGrow = r.nextInt(2) + 5; // creates a random number of turns needed before harvest this particular range is 5-7
+			waterPerTurn = 1;
+			value = r.nextInt(5) + 15; // setting random sell value for the plant this particular range is $15 - 20
+	}
 		//else if () {}
 //		TO DO: write else if statements to create other types of plants
 		
